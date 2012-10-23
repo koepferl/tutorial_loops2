@@ -22,17 +22,8 @@ for j in [0.0001, 0.0000001, 0.0000000001]:
     disk.p = -1                         # Radial surface density exponent
     disk.beta = 1.25                    # Disk flaring power
 
-    envelope = m.add_power_law_envelope()
-    envelope.mass = 0.001 * msun          # Envelope mass
-    envelope.rmin = au                  # Inner radius
-    envelope.rmax = 10000 * au          # Outer radius
-    envelope.power = -2                 # Radial power
-    envelope.r_0 = au                   # Inner density radius
-
 #dust
     disk.dust = 'www003.hdf5'
-    envelope.dust = 'kmh.hdf5'
-#cavity.dust = 'kmh_hdf5'
 
 #coordinates
     n_r = 200
