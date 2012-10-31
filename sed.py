@@ -21,9 +21,10 @@ for f in ['0.0001', '1e-07', '1e-10']:
 
 # Plot the SED. The loglog command is similar to plot, but automatically
 # sets the x and y axes to be on a log scale.
-    ax.loglog(wav, nufnu)
+    ax.loglog(wav, nufnu, label=f)
     print f
 
+ax.legend()
 # Add some axis labels (we are using LaTeX here)
 ax.set_xlabel(r'$\lambda$ [$\mu$m]')
 ax.set_ylabel(r'$\lambda F_\lambda$ [ergs/s/cm$^2$]')
